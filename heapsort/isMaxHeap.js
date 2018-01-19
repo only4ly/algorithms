@@ -1,8 +1,15 @@
+/**
+ * judege an array is maxHeap or not
+ * @param {Array} arr the array to be judged
+ * @returns is maxHeao or not
+ */
 const isMaxHeap = function (arr) {
-  if (!Array.isArray(arr))
+  if (!Array.isArray(arr)) {
     throw new Error('must be array')
-  if (!arr.every(item => typeof item === 'number'))
+  }
+  if (!arr.every(item => typeof item === 'number')) {
     throw new Error('must be number array')
+  }
   // find lastRoot
   const lastRoot = arr.length / 2
   // let every rootNode have both left and right childNode

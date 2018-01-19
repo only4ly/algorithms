@@ -6,9 +6,6 @@ const matrixMinus = function (A, B) {
 }
 // 矩阵乘法 strassen解法
 const strassen = function (A, B) {
-  // console.log('------------------')
-  // console.log('A', A)
-  // console.log('B', B)
   // 递归终止条件
   if (A.length === 1 && A[0].length === 1) {
     return [[A[0][0] * B[0][0]]]
@@ -30,19 +27,10 @@ const strassen = function (A, B) {
   const A12 = A.slice(0, A.length / 2).map(item => item.slice(A.length / 2, A.length))
   const A21 = A.slice(A.length / 2, A.length).map(item => item.slice(0, A.length / 2))
   const A22 = A.slice(A.length / 2, A.length).map(item => item.slice(A.length / 2, A.length))
-  // console.log('A11', A11)
-  // console.log('A12', A12)
-  // console.log('A21', A21)
-  // console.log('A22', A22)
   const B11 = B.slice(0, B.length / 2).map(item => item.slice(0, B.length / 2))
   const B12 = B.slice(0, B.length / 2).map(item => item.slice(B.length / 2, B.length))
   const B21 = B.slice(B.length / 2, B.length).map(item => item.slice(0, B.length / 2))
   const B22 = B.slice(B.length / 2, B.length).map(item => item.slice(B.length / 2, B.length))
-  // console.log(B11, B12, B21, B22)
-  // console.log('B11', B11)
-  // console.log('B12', B12)
-  // console.log('B21', B21)
-  // console.log('B22', B22)
   // 10 个矩阵变量
   const S1 = matrixMinus(B12, B22)
   const S2 = matrixAdd(A11, A12)
