@@ -3,17 +3,12 @@ const isMaxHeap = function (arr) {
     throw new Error('must be array')
   if (!arr.every(item => typeof item === 'number'))
     throw new Error('must be number array')
-  // create an Complete Binary Tree
-  const deep = ~~Math.log2(arr.length)
-  const full = Math.pow(2, deep + 1) - 1
-  const last = full - arr.length
-  const lastArr = new Array(full - arr.length).fill(-Infinity)
-  const fullArr = arr.concat(lastArr)
-  // index of last Root Node + 1
-  const lastRoot = Math.pow(2, deep) - 1
-
-  return fullArr.every((item, index) => {
-    return (item >= fullArr[(index + 1) * 2 - 1] && item >= fullArr[(index + 1)*2 - 1]) || index >= lastRoot
+  // find lastRoot
+  const lastRoot = arr.length / 2
+  // let every rootNode have both left and right childNode
+  arr.length % 2 === 0 && arr.push(-Infinity)
+  return arr.every((item, index) => {
+    return index + 1 > lastRoot || (item >= arr[(index + 1) * 2 - 1] && item >= arr[(index + 1)*2 - 1])
   })
 }
 module.exports = isMaxHeap
