@@ -1,6 +1,6 @@
 const assert = require('assert')
-const isMaxHeap = require('../heapsort/isMaxHeap')
-const createMaxHeap = require('../heapsort/buildMaxHeap')
+const isMaxHeap = require('../sort/heapsort/isMaxHeap')
+const createMaxHeap = require('../sort/heapsort/buildMaxHeap')
 
 const createRandomArray = function () {
   const randomArray = []

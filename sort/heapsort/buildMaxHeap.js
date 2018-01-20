@@ -4,6 +4,7 @@
  * @returns {Array} an maxHeap array
  */
 const buildMaxHeap = function (arr) {
+  arr = Object.assign([], arr)
   const len = arr.length
   len % 2 === 0 && arr.push(-Infinity)
   const lastRoot = ~~(arr.length / 2) - 1

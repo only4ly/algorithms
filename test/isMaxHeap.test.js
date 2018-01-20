@@ -1,5 +1,5 @@
 const assert = require('assert')
-const isMaxHeap = require('../heapsort/isMaxHeap')
+const isMaxHeap = require('../sort/heapsort/isMaxHeap')
 
 describe('isMaxHeap is function to judge an array is an maxHeap or not', function () {
   it('shou return true', function () {
