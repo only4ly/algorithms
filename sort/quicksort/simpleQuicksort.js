@@ -1,6 +1,6 @@
 /**
  * 简单快速排序算法
- * @param {Array} arr 
+ * @param {Array<Number>} arr
  */
 const simpleQuicksort = function (arr) {
   if (arr.length <= 1) {

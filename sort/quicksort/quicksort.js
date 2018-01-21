@@ -1,7 +1,7 @@
 /**
  * 快速排序算法 哨兵法 一层包装
  * 详细过程以及分析请看大佬作品,此处不再赘述-----> http://developer.51cto.com/art/201403/430986.htm 
- * @param {Array} arr 
+ * @param {Array<Number>} arr
  */
 const quicksort = function (arr) {
   arr = Object.assign([], arr)
@@ -10,7 +10,7 @@ const quicksort = function (arr) {
 }
 /**
  * 快速排序算法 哨兵法 递归函数
- * @param {Array} arr 待排序数组
+ * @param {Array<Number>} arr 待排序数组
  * @param {Number} startIndex 子数组起始index
  * @param {Number} endIndex 子数组结束index
  */

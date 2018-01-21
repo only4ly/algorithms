@@ -1,6 +1,6 @@
 /**
  * judege an array is maxHeap or not
- * @param {Array} arr the array to be judged
+ * @param {Array<Number>} arr the array to be judged
  * @returns is maxHeao or not
  */
 const isMaxHeap = function (arr) {

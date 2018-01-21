@@ -1,7 +1,7 @@
 /**
  * an function to create an maxHeap (pure function)
- * @param {Array} arr an unsort array
- * @returns {Array} an maxHeap array
+ * @param {Array<Number>} arr an unsort array
+ * @returns {Array<Number>} an maxHeap array
  */
 const buildMaxHeap = function (arr) {
   arr = Object.assign([], arr)
@@ -15,10 +15,10 @@ const buildMaxHeap = function (arr) {
 }
 /**
  * given an array, build the child maxHeap from index
- * @param {Array} arr the given array
+ * @param {Array<Number>} arr the given array
  * @param {Number} index of the rootNode of child heap
  */
-const maxHeap = function(arr, index) {
+const maxHeap = function (arr, index) {
   while (true) {
     const left = 2 * index + 1
     const right = 2 * index + 2
@@ -27,7 +27,7 @@ const maxHeap = function(arr, index) {
     }
     if (arr[index] >= arr[left] && arr[index] >= arr[right]) {
       break
-    } else if(arr[left] > arr[right]) {
+    } else if (arr[left] > arr[right]) {
       let temp = arr[index]
       arr[index] = arr[left]
       arr[left] = temp
