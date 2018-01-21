@@ -1,5 +1,5 @@
 /**
- * an function to create an maxHeap
+ * an function to create an maxHeap (pure function)
  * @param {Array} arr an unsort array
  * @returns {Array} an maxHeap array
  */
@@ -13,6 +13,11 @@ const buildMaxHeap = function (arr) {
   }
   return arr.slice(0, len)
 }
+/**
+ * given an array, build the child maxHeap from index
+ * @param {Array} arr the given array
+ * @param {Number} index of the rootNode of child heap
+ */
 const maxHeap = function(arr, index) {
   while (true) {
     const left = 2 * index + 1

@@ -1,6 +1,6 @@
 const buildMaxHeap = require('./buildMaxHeap')
 /**
- * 堆排序算法
+ * heap sort algorithms
  * @param {Array} arr 输入一个无序数组
  * @returns 一个已排序数组(逆序)
  */

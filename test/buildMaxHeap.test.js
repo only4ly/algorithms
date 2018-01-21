@@ -22,7 +22,7 @@ describe('createMaxHeap is function to let an unsort array to be an maxHeap', fu
   it('should work on simple array', function () {
     assert.equal(isMaxHeap(createMaxHeap([1, 2, 3, 0, 0, 0, 0, 0, 99, 9, 20])), true)
   })
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 10; i++) {
     it('should work on random array', function () {
       assert.equal(isMaxHeap(createMaxHeap(createRandomArray())), true)
     })
