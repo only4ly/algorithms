@@ -15,7 +15,7 @@ describe('heapSort will return an sorted array', function() {
   it('should work on simple array', function () {
     assert.equal(isSorted(heapSort([1, 2, 3]), true), true)
   })
-  for (let i = 0; i < 100; i++) {
+  for (let i = 0; i < 10; i++) {
     it('should work on random array', function () {
       assert.equal(isSorted(heapSort(createRandomArray()), true), true)
     })
