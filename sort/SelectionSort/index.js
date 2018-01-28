@@ -1,8 +1,8 @@
 /**
- * 冒泡排序
+ * 选择排序
  * @param {Array<Number>} arr
  */
-const bubbleSort = function (arr) {
+const selectionSort = function (arr) {
   arr = Object.assign([], arr)
   for (let i = 0, len = arr.length; i < len; i++) {
     for (let j = i + 1; j < len; j++) {
