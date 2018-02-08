@@ -15,4 +15,4 @@ const selectionSort = function (arr) {
   }
   return arr
 }
-module.exports = bubbleSort
+module.exports = selectionSort
