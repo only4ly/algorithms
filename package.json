@@ -15,5 +15,8 @@
     "istanbul": "^0.4.5",
     "mocha": "^4.1.0",
     "sinon": "^4.1.6"
+  },
+  "dependencies": {
+    "ramda": "^0.25.0"
   }
 }
