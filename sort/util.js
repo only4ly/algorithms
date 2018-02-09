@@ -16,10 +16,7 @@ const isSorted = function (arr, negative) {
  * @param {Number} min 数组元素最小边界
  * @param {Number} max 数组元素最大边界
  */
-const createRandomArray = function (len, min, max) {
-  len === undefined && (len = 1000)
-  min === undefined && (min = 0)
-  max === undefined && (max = 1000)
+const createRandomArray = function (len = 1000, min = 0, max = 1000) {
   const randomArray = []
   for (let i = 0; i < len; i++) {
     randomArray.push(~~(Math.random() * max) + min)

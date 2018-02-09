@@ -1,14 +1,8 @@
 const assert = require('assert')
 const isMaxHeap = require('../sort/heapsort/isMaxHeap')
 const createMaxHeap = require('../sort/heapsort/buildMaxHeap')
+const createRandomArray = require('../sort/util').createRandomArray
 
-const createRandomArray = function () {
-  const randomArray = []
-  for (let i = 0; i < 1000; i++) {
-    randomArray.push(~~(Math.random() * 10000))
-  }
-  return randomArray
-}
 describe('createMaxHeap is function to let an unsort array to be an maxHeap', function () {
   it('should work on simple array', function () {
     assert.equal(isMaxHeap(createMaxHeap([1, 2, 3, 4, 5])), true)
