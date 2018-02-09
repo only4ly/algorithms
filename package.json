@@ -17,6 +17,7 @@
     "sinon": "^4.1.6"
   },
   "dependencies": {
+    "accounting": "^0.4.1",
     "ramda": "^0.25.0"
   }
 }

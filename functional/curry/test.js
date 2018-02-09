@@ -22,9 +22,7 @@ const filterQs = function (xs) {
 const filterQsp = (() => filterQs)()
 
 // Exercise 3
-const reduce = R.curry(function (f, a, xs) {
-  return xs.reduce(f, a)
-})
+const reduce = R.curry((f, a, xs) => xs.reduce(f, a))
 const _keepHighest = function (x, y) { return x >= y ? x : y }
 // 重构这段代码:
 /**
