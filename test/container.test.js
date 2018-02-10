@@ -42,7 +42,7 @@ describe('test Exercise 5', function () {
     })
   })
 })
-describe('test Exercise 5', function () {
+describe('test Exercise 6', function () {
   it('Exercise 6', function () {
     assert.deepEqual(Left.of('Your account is not active'), ex6({ active: false, name: 'Gary' }))
     assert.deepEqual(Right.of('Welcome Theresa'), ex6({ active: true, name: 'Theresa' }))
