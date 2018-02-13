@@ -14,9 +14,9 @@ function ListNode (val) {
 var addTwoNumbers = function (l1, l2) {
   var val1 = format(l1)
   var val2 = format(l2)
-  console.log(val1 + ' | ' + val2)
+  // console.log(val1 + ' | ' + val2)
   var res = val1 + val2
-  console.log(res)
+  // console.log(res)
   var resNode = unformat(res)
   return resNode
 }

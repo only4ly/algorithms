@@ -43,12 +43,12 @@ const slice = R.curry((start, end, arr) => arr.slice(start, end))
 const take = slice(0)
 
 // debug in vscode with nodejs
-console.log(max([1, 2, 3, 4, 5, 6, 7]))
-console.log(maxCurry([1, 2, 3, 4, 5, 6, 7]))
-console.log(filterQs(['quick', 'camels', 'quarry', 'over', 'quails']))
-console.log(filterQsp(['quick', 'camels', 'quarry', 'over', 'quails']))
-console.log(take(4)('hello world'))
-console.log(take(4, 'hello world'))
+// console.log(max([1, 2, 3, 4, 5, 6, 7]))
+// console.log(maxCurry([1, 2, 3, 4, 5, 6, 7]))
+// console.log(filterQs(['quick', 'camels', 'quarry', 'over', 'quails']))
+// console.log(filterQsp(['quick', 'camels', 'quarry', 'over', 'quails']))
+// console.log(take(4)('hello world'))
+// console.log(take(4, 'hello world'))
 
 module.exports = {
   words,
