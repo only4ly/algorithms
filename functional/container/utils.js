@@ -1,3 +1,4 @@
+const _ = require('ramda')
 const inspect = function (x) {
   return (x && x.inspect) ? x.inspect() : x
 }
@@ -98,9 +99,46 @@ Right.prototype.chain = function (f) {
 Right.prototype.inspect = function () {
   return 'Right(' + inspect(this.__value) + ')'
 }
+
+const IO = function (f) {
+  this.unsafePerformIO = f
+}
+
+IO.of = function (x) {
+  return new IO(function () {
+    return x
+  })
+}
+
+IO.prototype.map = function (f) {
+  return new IO(_.compose(f, this.unsafePerformIO))
+}
+
+IO.prototype.join = function () {
+  return this.unsafePerformIO()
+}
+
+IO.prototype.chain = function (f) {
+  return this.map(f).join()
+}
+
+IO.prototype.ap = function (a) {
+  return this.chain(function (f) {
+    return a.map(f)
+  })
+}
+
+IO.prototype.inspect = function () {
+  return 'IO(' + inspect(this.unsafePerformIO) + ')'
+}
+
+const unsafePerformIO = function (x) { return x.unsafePerformIO() }
+
 module.exports = {
   Identity,
   Maybe,
   Left,
-  Right
+  Right,
+  IO,
+  unsafePerformIO
 }
